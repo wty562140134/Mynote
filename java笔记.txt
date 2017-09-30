@@ -19,4 +19,5 @@ YAML使用:
 	下载jar包https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.18/snakeyaml-1.18.jar
 	在配置文件中配置时,一定需要加空格如=>mydata: data, data2
 	没有这个空格将会报错,还有不能用Tab,只能使用空格
+	yaml语法参考http://www.ruanyifeng.com/blog/2016/07/yaml.html?f=tt
 	
