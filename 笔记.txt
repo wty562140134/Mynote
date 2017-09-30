@@ -87,6 +87,14 @@ git使用:
 			8.从现在起，只要本地作了提交，就可以通过如下命令：git push origin master把本地master分支的最新修改推送到github上了，现在你就拥有了真正的分布式版本库了。
 			
 			
+		修改远程仓库
+			1.删除后添加
+				1.git remote rm origin
+				2.git remote add origin [url]
+			2.修改命令 
+				1.git remote origin set-url [url]
+			
+			
 		如何从远程库克隆
 			1.使用命令git clone https://github.com/[你的github名]/[项目名]
 			
