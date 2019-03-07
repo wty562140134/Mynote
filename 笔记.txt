@@ -1,193 +1,195 @@
-ngronsʹ�ã�
-	���ã����Խ�����������������ӳ�䵽�����ķ����������
-	1.����https://ngrok.com/����ngro�ͻ���
-	2.ע���õ� Authtoken
-	3.���뵽��ѹngrons�ļ���
-	4.ʹ��ngrok authtoken [Authtoken]����������Ȩ
-	5.ʹ��ngrok http [prot]ӳ�䵽����
+ngrons使用：
+	作用：可以将局域网设置域名并映射到公网的反向代理工具
+	1.进入https://ngrok.com/下载ngro客户端
+	2.注册后得到 Authtoken
+	3.进入到解压ngrons文件下
+	4.使用ngrok authtoken [Authtoken]命令添加授权
+	5.使用ngrok http [prot]映射到公网
+	6.配置文件在C:\Users\YanYe/.ngrok2/ngrok.yml
 	P.S.
-	ʹ��ngrok http -subdomain=[net_name] [prot]������������(���ǲ�һ��������)
+	使用ngrok http -subdomain=[net_name] [prot]可以设置域名(但是不一定可以用)
 	
 	
 	
-gitʹ��:
-	Git���������������£�
-		mkdir:						XX (����һ����Ŀ¼ XXָĿ¼��)
-		pwd:						��ʾ��ǰĿ¼��·����
-		git init          			�ѵ�ǰ��Ŀ¼��ɿ��Թ�����git�ֿ⣬��������.git�ļ���
-		git add XX       			��xx�ļ����ӵ��ݴ���ȥ��
-		git commit �Cm ��XX��  		�ύ�ļ� �Cm �������ע�͡�
-		git status        			�鿴�ֿ�״̬
-		git diff  XX      			�鿴XX�ļ��޸�����Щ����
-		git log          			�鿴��ʷ��¼
-		git reset �Chard HEAD^ 		���� git reset  �Chard HEAD~ ���˵���һ���汾(�������˵�100���汾��ʹ��git reset �Chard HEAD~100 )
-		cat XX         				�鿴XX�ļ�����
-		git reflog       			�鿴��ʷ��¼�İ汾��id
-		git checkout �� XX  			��XX�ļ��ڹ��������޸�ȫ��������
-		git rm XX          			ɾ��XX�ļ�
-		git checkout �Cb dev  		����dev��֧ ���л���dev��֧��
-		git branch  				�鿴��ǰ���еķ�֧
-		git checkout master 		�л���master��֧
-		git merge dev    			�ڵ�ǰ�ķ�֧�Ϻϲ�dev��֧
-		git branch �Cd dev 			ɾ��dev��֧
-		git branch name  			������֧
-		git stash 					�ѵ�ǰ�Ĺ����������� ���Ժ�ָ��ֳ����������
-		git stash list 				�鿴���б����ص��ļ��б�
-		git stash apply 			�ָ������ص��ļ����������ݲ�ɾ��
-		git stash drop 				ɾ���ļ�
-		git stash pop 				�ָ��ļ���ͬʱ Ҳɾ���ļ�
-		git remote 					�鿴Զ�̿����Ϣ
-		git remote �Cv 				�鿴Զ�̿����ϸ��Ϣ
-		git push origin master  	Git���master��֧���͵�Զ�̿��Ӧ��Զ�̷�֧��
-		git remote add origin https://github.com/[���github��]/[��Ŀ��] 			����һ��Զ�̿�
-		git push �Cu(��һ��Ҫ��-u �Ժ���Ҫ) origin master 							ǰmaster��֧���͵�Զ�̿�
-		git clone https://github.com/[���github��]/[��Ŀ��] 						��Զ�̿��п�¡
+	
+git使用:
+	Git基本常用命令如下：
+		mkdir:						XX (创建一个空目录 XX指目录名)
+		pwd:						显示当前目录的路径。
+		git init          			把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
+		git add XX       			把xx文件添加到暂存区去。
+		git commit –m “XX”  		提交文件 –m 后面的是注释。
+		git status        			查看仓库状态
+		git diff  XX      			查看XX文件修改了那些内容
+		git log          			查看历史记录
+		git reset –hard HEAD^ 		或者 git reset  –hard HEAD~ 回退到上一个版本(如果想回退到100个版本，使用git reset –hard HEAD~100 )
+		cat XX         				查看XX文件内容
+		git reflog       			查看历史记录的版本号id
+		git checkout — XX  			把XX文件在工作区的修改全部撤销。
+		git rm XX          			删除XX文件
+		git checkout –b dev  		创建dev分支 并切换到dev分支上
+		git branch  				查看当前所有的分支
+		git checkout master 		切换回master分支
+		git merge dev    			在当前的分支上合并dev分支
+		git branch –d dev 			删除dev分支
+		git branch name  			创建分支
+		git stash 					把当前的工作隐藏起来 等以后恢复现场后继续工作
+		git stash list 				查看所有被隐藏的文件列表
+		git stash apply 			恢复被隐藏的文件，但是内容不删除
+		git stash drop 				删除文件
+		git stash pop 				恢复文件的同时 也删除文件
+		git remote 					查看远程库的信息
+		git remote –v 				查看远程库的详细信息
+		git push origin master  	Git会把master分支推送到远程库对应的远程分支上
+		git remote add origin https://github.com/[你的github名]/[项目名] 			关联一个远程库
+		git push –u(第一次要用-u 以后不需要) origin master 							前master分支推送到远程库
+		git clone https://github.com/[你的github名]/[项目名] 						从远程库中克隆
 		
 		
-	windos����msysgit��װ��ɺ�ʹ������
-	git config --global user.name "�û���" git config --global user.email "����"
-	ע�⣺git config  �C-global ���������������������ʾ����̨���������е�Git�ֿⶼ��ʹ��������ã�
-	��Ȼ��Ҳ���Զ�ĳ���ֿ�ָ���Ĳ�ͬ���û��������䡣
+	windos下载msysgit安装完成后使用命令
+	git config --global user.name "用户名" git config --global user.email "邮箱"
+	注意：git config  –-global 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，
+	当然你也可以对某个仓库指定的不同的用户名和邮箱。
 	
 	
-		�����汾��
-			1.���뵽��Ҫ�����ֿ��ļ��� �磺cd d:/work/
-			2.ʹ������git init�����ֿ�
-			3.ʹ������git add [�ļ������ļ���] ���ļ����ӵ��ݴ��� �磺git add test.py
-			4.ʹ������git commit����Git���ļ��ύ���ֿ�
-			5.ʹ������git status ���鿴δ�ύ�ļ�
-			6.ʹ������git pushͬ�����ο���
-				P.S. git diff [�ļ���] ���Բ鿴�ļ��޸���ʲô
+		创建版本库
+			1.进入到需要建立仓库文件下 如：cd d:/work/
+			2.使用命令git init建立仓库
+			3.使用命令git add [文件名或文件夹] 将文件添加到暂存区 如：git add test.py
+			4.使用命令git commit告诉Git把文件提交到仓库
+			5.使用命令git status 来查看未提交文件
+			6.使用命令git push同步到参考中
+				P.S. git diff [文件名] 可以查看文件修改了什么
 				
 				
-		�汾����
-			1.ʹ������git log�鿴�����������(Խ����Խ�������޸�)���������̫�����ʹ��git log -pretty=oneline
-			2.ʹ������git reset -hard HEAD^���˻���һ���汾��git reset -hard HEAD^^�˻����ϸ��汾�Դ����������Ҫ�˻غ�����ǰ�İ汾����ǰ100��ʹ��git reset -hard HEAD~100
-			3.���˻ذ汾��ʹ��git reset -hard [�汾��] �������ǻ���û�а汾��ʹ��git reflog�鿴�汾��
+		版本回退
+			1.使用命令git log查看最近新增内容(越靠上越是最新修改)，如果内容太多可以使用git log -pretty=oneline
+			2.使用命令git reset -hard HEAD^来退回上一个版本，git reset -hard HEAD^^退回上上个版本以此类推如果需要退回很早以前的版本比如前100，使用git reset -hard HEAD~100
+			3.误退回版本后使用git reset -hard [版本号] 假如忘记或者没有版本号使用git reflog查看版本号
 			
 			
-		Git�����޸ĺ�ɾ���ļ�
-			1.�����޸�:
-				(1).�����֪��Ҫɾ����Щ���ݵĻ���ֱ���ֶ�����ȥ����Щ��Ҫ���ļ���Ȼ��add���ӵ��ݴ��������commit��
-				(2).�ҿ��԰���ǰ�ķ���ֱ�ӻָ�����һ���汾��ʹ�� git reset  �Chard HEAD^
-				(3).ʹ��git checkout  �� [�ļ���] ���Զ������������޸ķ���֮ǰ��git add
-					ע�⣺����git checkout �� readme.txt �е� �� ����Ҫ�����û�� �� �Ļ�����ô�����ɴ�����֧��.
-			2.ɾ���ļ�
-				(1).ֱ��ɾ���ļ�rm [�ļ���](���Ƿ���ɾ��������û��commitǰ������git checkout -[�ļ���])Ȼ��ʹ��commit
+		Git撤销修改和删除文件
+			1.撤销修改:
+				(1).如果我知道要删掉那些内容的话，直接手动更改去掉那些需要的文件，然后add添加到暂存区，最后commit掉
+				(2).我可以按以前的方法直接恢复到上一个版本。使用 git reset  –hard HEAD^
+				(3).使用git checkout  — [文件名] 可以丢弃工作区的修改放弃之前的git add
+					注意：命令git checkout — readme.txt 中的 — 很重要，如果没有 — 的话，那么命令变成创建分支了.
+			2.删除文件
+				(1).直接删除文件rm [文件名](若是发现删除错误并且没有commit前可以用git checkout -[文件名])然后使用commit
 				
 				
-		Զ�ֿ̲�
-			1.��ע��github�˺�
-			2.ʹ��ssh-keygen  -t rsa �CC �����䡱�����ܳ�(id_rsa��˽Կ������й¶��ȥ��id_rsa.pub�ǹ�Կ�����Է��ĵظ����κ���)
-			3.��¼github,�򿪡� settings���е�SSH Keysҳ�棬Ȼ������Add SSH Key��,��������title����Key�ı��������id_rsa.pub�ļ�������	
-			4.����Զ����github�����½���new repository
-			5.��Repository name������Ŀ����������Ĭ�����ã������Create repository����ť���ͳɹ��ش�����һ���µ�Git�ֿ�
-			6.�������زֿ��ڱ��ص�testgit�ֿ����������git remote add origin https://github.com/[���github��]/[��Ŀ��]
-			7.�ѱ��ؿ���������͵�Զ�̣�ʹ�� git push -u origin master���ʵ�����ǰѱ��زֿ⵱ǰ��֧master���͵�Զ�̡���һ������master��֧ʱ������ �Cu����Git������ѱ��ص�master��֧�������͵�Զ���µ�master��֧������ѱ��ص�master��֧��Զ�̵�master��֧�������������Ժ�����ͻ�����ȡʱ�Ϳ��Լ�������ͳɹ��󣬿���������githubҳ���п���Զ�̿�������Ѿ��ͱ���һģһ����
-			8.��������ֻҪ���������ύ���Ϳ���ͨ���������git push origin master�ѱ���master��֧�������޸����͵�github���ˣ��������ӵ���������ķֲ�ʽ�汾���ˡ�
+		远程仓库
+			1.先注册github账号
+			2.使用ssh-keygen  -t rsa –C “邮箱”创建密匙(id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人)
+			3.登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容	
+			4.添加远程在github官网下进入new repository
+			5.在Repository name填入项目名其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库
+			6.关联本地仓库在本地的testgit仓库下运行命令：git remote add origin https://github.com/[你的github名]/[项目名]
+			7.把本地库的内容推送到远程，使用 git push -u origin master命令，实际上是把本地仓库当前分支master推送到远程。第一次推送master分支时，加上 –u参数Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。推送成功后，可以立刻在github页面中看到远程库的内容已经和本地一模一样了
+			8.从现在起，只要本地作了提交，就可以通过如下命令：git push origin master把本地master分支的最新修改推送到github上了，现在你就拥有了真正的分布式版本库了。
 			
 			
-		�޸�Զ�ֿ̲�
-			1.ɾ��������
+		修改远程仓库
+			1.删除后添加
 				1.git remote rm origin
 				2.git remote add origin [url]
-			2.�޸����� 
+			2.修改命令 
 				1.git remote origin set-url [url]
 			
 			
-		��δ�Զ�̿��¡
-			1.ʹ������git clone https://github.com/[���github��]/[��Ŀ��]
+		如何从远程库克隆
+			1.使用命令git clone https://github.com/[你的github名]/[项目名]
 			
 			
-		������ϲ���֧
-			1.git checkout �Cb [��֧��]��ʾ�������л����൱������2������git branch dev ,git checkout dev
-			2.�л���master������֧��ʹ��git merge [��֧��]�ϲ�������֧(Fast-forward��Ϣ��Git�������ǣ���κϲ��ǡ����ģʽ����Ҳ����ֱ�Ӱ�masterָ��ǰ�ύ�����Ժϲ��ٶȷǳ���)
-			3.ɾ����֧git branch �Cd [��֧��]
-			�ܽ���̣�
-				�鿴��֧��git branch
-				������֧��git branch [��֧��]
-				�л���֧��git checkout name
-				����+�л���֧��git checkout �Cb [��֧��]
-				�ϲ�ĳ��֧����ǰ��֧��git merge [��֧��]
-				ɾ����֧��git branch �Cd [��֧��]
+		创建与合并分支
+			1.git checkout –b [分支名]表示创建并切换，相当于如下2条命令git branch dev ,git checkout dev
+			2.切换到master即主分支后使用git merge [分支名]合并两个分支(Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向当前提交，所以合并速度非常快)
+			3.删除分支git branch –d [分支名]
+			总结过程：
+				查看分支：git branch
+				创建分支：git branch [分支名]
+				切换分支：git checkout name
+				创建+切换分支：git checkout –b [分支名]
+				合并某分支到当前分支：git merge [分支名]
+				删除分支：git branch –d [分支名]
 				
 				
-		�����ͻ
-			1.ʹ��git checkout -b fenzhi1�������л���֧������fenzhi1��֧������������
-			2.ʹ��git checkout master �л���master��֧���Ӻ�fenzhi1��֧��ͬ����
-			3.��master��֧ʹ��git merge fenzhi1 ��fenzhi1��֧�ϲ���master��֧
-			4.ʹ��git status�鿴״̬
-			5.Git��<<<<<<<��=======��>>>>>>>��ǳ���ͬ��֧�����ݣ�����<<<<<<<HEAD��ָ����֧�޸ĵ����ݣ�
-			>>>>>fenzhi1��ָfenzhi1���޸ĵ����ݣ��м�ʹ��=======���зָ�����
-			6.���ļ����޸�Git<<<<<<<��=======��>>>>>>>֮������ݣ�������Ҫ����
-			7.ʹ��git add [�ļ���] ���ļ����ӵ��ݴ���
-			8.ʹ��git commit -m ���ύ˵���� ���ļ�
-				�����Ҫ�鿴��֧�ϲ�������Ļ�����Ҫʹ������ git log����
+		解决冲突
+			1.使用git checkout -b fenzhi1创建并切换分支，并在fenzhi1分支中添加新内容
+			2.使用git checkout master 切换回master分支添加和fenzhi1分支不同内容
+			3.在master分支使用git merge fenzhi1 把fenzhi1分支合并到master分支
+			4.使用git status查看状态
+			5.Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，其中<<<<<<<HEAD是指主分支修改的内容，
+			>>>>>fenzhi1是指fenzhi1上修改的内容，中间使用=======进行分割区别
+			6.打开文件后修改Git<<<<<<<，=======，>>>>>>>之间的内容，保留需要部分
+			7.使用git add [文件名] 将文件添加到暂存区
+			8.使用git commit -m “提交说明” 提文件
+				如果想要查看分支合并的情况的话，需要使用命令 git log命令
 				
 				
-		��֧��������
-			ͨ���ϲ���֧ʱ��gitһ��ʹ�á�Fast forward��ģʽ��������ģʽ�£�ɾ����֧�󣬻ᶪ����֧��Ϣ��ʹ�ô����� �C-no-ff�����á�Fast forward��ģʽ
-			1.����һ��dev��֧��
-			2.�޸�dev���ļ����ݡ�
-			3.���ӵ��ݴ�����
-			4.�л�������֧(master)��
-			5.�ϲ�dev��֧��ʹ������ git merge �C-no-ff  -m ��ע�͡� dev
-			6.�鿴��ʷ��¼
-			��֧���ԣ�����master����֧Ӧ���Ƿǳ��ȶ��ģ�Ҳ�������������°汾��һ������²�����������ɻ�ɻ�һ����������½���dev��֧�ϸɻ����󣬱�����Ҫ����������˵dev��֧�����ȶ�����Ժϲ�������֧master������
+		分支管理策略
+			通常合并分支时，git一般使用”Fast forward”模式，在这种模式下，删除分支后，会丢掉分支信息，使用带参数 –-no-ff来禁用”Fast forward”模式
+			1.创建一个dev分支。
+			2.修改dev中文件内容。
+			3.添加到暂存区。
+			4.切换回主分支(master)。
+			5.合并dev分支，使用命令 git merge –-no-ff  -m “注释” dev
+			6.查看历史记录
+			分支策略：首先master主分支应该是非常稳定的，也就是用来发布新版本，一般情况下不允许在上面干活，干活一般情况下在新建的dev分支上干活，干完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。
 			
 			
-		BUG��֧
-			�ڿ����У��ᾭ������bug���⣬��ô����bug����Ҫ�޸�����Git�У���֧�Ǻ�ǿ��ģ�ÿ��bug������ͨ��һ����ʱ��֧���޸����޸���ɺ󣬺ϲ���֧��Ȼ����ʱ�ķ�֧ɾ����
-			�������ڿ����нӵ�һ��404 bugʱ�����ǿ��Դ���һ��404��֧���޸��������ǣ���ǰ��dev��֧�ϵĹ�����û���ύ��
-				1.ʹ�� git status �鿴������֧���(����δ�ύ״̬)
-			�������Ҳ����ύ�����ǹ������е�һ��ʱ�����ǻ��޷��ύ�������������֧bugҪ2����ɣ�������issue-404 bug��Ҫ5��Сʱ����ɡ���ô���أ����ã�Git���ṩ��һ��stash���ܣ����԰ѵ�ǰ�����ֳ� �����������������Ժ�ָ��ֳ����������
-				1.ʹ�� git stash ����ǰ�����ֳ���������,ʹ����������Git��stash���ݴ�����ĳ���ط�
-				2.ʹ�� git status �鿴���غ�Ĺ�����ί�ɾ�״̬
-				3.����issue-404��֧���޸�bug��
-					��������Ҫȷ�����Ǹ���֧���޸�bug��������������������֧master�����޸��ģ�������Ҫ��master��֧�ϴ���һ����ʱ��֧
-					(1).ʹ�� git checkout -b issue-404 ��master��֧�ϴ���issue-404��֧
-					(2).�鿴���޸��ļ�����
-					(3).ʹ�� git add ���ӵ��ݴ�����
-					(4).ʹ�� git commit -m "�ύ˵��" �ύ�ļ�
-				4.�޸���ɺ��л���master��֧�ϣ�����ɺϲ������ɾ��issue-404��֧
-					(1).ʹ�� git checkout master �л���master��֧
-					(2).ʹ�� git merge --no-ff -m "merge bug fix 404" issue-404 �ϲ�issue-404��֧��master��֧
-					(3).�鿴�ϲ������ݣ�ȷ�Ϻϲ�����һ��
-					(4).��master��֧��ʹ�� git branch -d issue-404 ɾ��issue-404��֧
-				5.ʹ�� git checkout dev �ص�������֧�С��������Ǹɾ��ģ���ô���ǹ����ֳ�ȥ�����أ����ǿ���ʹ������ git stash list���鿴�£��ָ������������ַ���
-					(1).git stash apply�ָ����ָ���stash���ݲ���ɾ��������Ҫʹ������git stash drop��ɾ��
-					(2).��һ�ַ�ʽ��ʹ��git stash pop,�ָ���ͬʱ��stash����Ҳɾ����
+		BUG分支
+			在开发中，会经常碰到bug问题，那么有了bug就需要修复，在Git中，分支是很强大的，每个bug都可以通过一个临时分支来修复，修复完成后，合并分支，然后将临时的分支删除掉
+			比如我在开发中接到一个404 bug时候，我们可以创建一个404分支来修复它，但是，当前的dev分支上的工作还没有提交。
+				1.使用 git status 查看工作分支情况(工作未提交状态)
+			并不是我不想提交，而是工作进行到一半时候，我们还无法提交，比如我这个分支bug要2天完成，但是我issue-404 bug需要5个小时内完成。怎么办呢？还好，Git还提供了一个stash功能，可以把当前工作现场 ”隐藏起来”，等以后恢复现场后继续工作
+				1.使用 git stash 将当前工作现场隐藏起来,使用这个命令后Git把stash内容存在了某个地方
+				2.使用 git status 查看隐藏后的工作区委干净状态
+				3.创建issue-404分支来修复bug了
+					首先我们要确定在那个分支上修复bug，比如我现在是在主分支master上来修复的，现在我要在master分支上创建一个临时分支
+					(1).使用 git checkout -b issue-404 在master分支上创建issue-404分支
+					(2).查看并修改文件内容
+					(3).使用 git add 添加到暂存区。
+					(4).使用 git commit -m "提交说明" 提交文件
+				4.修复完成后，切换到master分支上，并完成合并，最后删除issue-404分支
+					(1).使用 git checkout master 切换到master分支
+					(2).使用 git merge --no-ff -m "merge bug fix 404" issue-404 合并issue-404分支到master分支
+					(3).查看合并后内容，确认合并内容一致
+					(4).在master分支中使用 git branch -d issue-404 删除issue-404分支
+				5.使用 git checkout dev 回到工作分支中。工作区是干净的，那么我们工作现场去哪里呢？我们可以使用命令 git stash list来查看下，恢复工作区有两种方法
+					(1).git stash apply恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除
+					(2).另一种方式是使用git stash pop,恢复的同时把stash内容也删除了
 		
 		
-		����Э��
-			�����Զ�̿��¡ʱ��ʵ����Git�Զ��ѱ��ص�master��֧��Զ�̵�master��֧��Ӧ�����ˣ�����Զ�̿��Ĭ��������origin
-				1.Ҫ�鿴Զ�̿����Ϣ ʹ�� git remote
-				2.Ҫ�鿴Զ�̿����ϸ��Ϣ ʹ�� git remote �Cv
-			���ͷ�֧
-				���ͷ�֧���ǰѸ÷�֧�����б����ύ��Զ�̿��У�����ʱ��Ҫָ�����ط�֧��������Git�ͻ�Ѹ÷�֧���͵�Զ�̿��Ӧ��Զ�̷�֧��
-					ʹ������ git push origin master
-					�����������Ҫ���͵�������֧������dev��֧�ϣ����ǻ����Ǹ����� git push origin dev
-				��������£���Ҫ���ͷ�֧
-					1.master��֧������֧�����Ҫʱ����Զ��ͬ��
-					2.һЩ�޸�bug��֧����Ҫ���͵�Զ��ȥ�������Ⱥϲ�������֧�ϣ�Ȼ�������֧master���͵�Զ��ȥ
-			��֧ץȡ
-				����Э��ʱ����Ҷ�����master��֧�����͸��Ե��޸ġ��������ǿ���ģ������һ��ͬ�£���������һ̨�����ϣ�ע��Ҫ��SSH key���ӵ�github�ϣ�����ͬһ̨����������һ��Ŀ¼��¡���½�һ��Ŀ¼���ֽ�testgit2
-					1.ʹ�� git push origin dev ��dev��֧������Զ��
-					2.����testgit2Ŀ¼ git clone https://github.com/[���github��]/[��Ŀ��]
-					3.��dev��֧�����������ͱ����Զ�̵�origin��dev��֧��������
-						(1).ʹ�� git checkout  �Cb dev origin/dev ����Զ��origin��dev��֧������
-						(2).�鿴���޸��ļ�
-						(3).ʹ�� git add [�ļ���] ���ӵ��ݴ���
-						(4).ʹ�� git commit -m "�ύ˵��" �ύ
-						(5).ʹ�� git push origin dev ������Զ��origin��dev��֧
-							ע�⣺Э������ʱ���޸�ͬһ���ļ���ͬһ���ط�pushʱ�ᱨ�����������
-								��.ʹ�� git pull ���ļ��뱾�غϲ�������ͻ
-									P.S.�ύ��Զ�ֿ̲���Ҫ����ָ������dev��Զ��dev������,ʹ�� git branch --set-upstream dev origin/dev
-								��.ʹ�� git add ���޸��ļ����ӵ��ݴ���
-								��.ʹ�� git commit -m "�ύ˵��" �ύ
-								��.ʹ�� git push origin dev
-			��ˣ�����Э������ģʽһ���������ģ�
-				1.���ȣ�������ͼ��git push origin [��֧��]�����Լ����޸�
-				2.�������ʧ�ܣ�����ΪԶ�̷�֧����ı��ظ����磬��Ҫ����git pull��ͼ�ϲ�
-				3.����ϲ��г�ͻ������Ҫ�����ͻ�����ڱ����ύ������git push origin [��֧��]����		
-	���ϱʼǲο�http://blog.csdn.net/zhang1027963459/article/details/50478340
+		多人协作
+			当你从远程库克隆时候，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且远程库的默认名称是origin
+				1.要查看远程库的信息 使用 git remote
+				2.要查看远程库的详细信息 使用 git remote –v
+			推送分支
+				推送分支就是把该分支上所有本地提交到远程库中，推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上
+					使用命令 git push origin master
+					如果我们现在要推送到其他分支，比如dev分支上，我们还是那个命令 git push origin dev
+				正常情况下，需要推送分支
+					1.master分支是主分支，因此要时刻与远程同步
+					2.一些修复bug分支不需要推送到远程去，可以先合并到主分支上，然后把主分支master推送到远程去
+			分支抓取
+				多人协作时，大家都会往master分支上推送各自的修改。现在我们可以模拟另外一个同事，可以在另一台电脑上（注意要把SSH key添加到github上）或者同一台电脑上另外一个目录克隆，新建一个目录名字叫testgit2
+					1.使用 git push origin dev 把dev分支推送至远程
+					2.进入testgit2目录 git clone https://github.com/[你的github名]/[项目名]
+					3.在dev分支上做开发，就必须把远程的origin的dev分支到本地来
+						(1).使用 git checkout  –b dev origin/dev 创建远程origin的dev分支到本地
+						(2).查看并修改文件
+						(3).使用 git add [文件名] 添加到暂存区
+						(4).使用 git commit -m "提交说明" 提交
+						(5).使用 git push origin dev 推送至远程origin的dev分支
+							注意：协作开发时，修改同一个文件的同一个地方push时会报错，解决如下
+								①.使用 git pull 将文件与本地合并后解决冲突
+									P.S.提交至远程仓库需要进行指定本地dev与远程dev的连接,使用 git branch --set-upstream dev origin/dev
+								②.使用 git add 将修改文件添加到暂存区
+								③.使用 git commit -m "提交说明" 提交
+								④.使用 git push origin dev
+			因此：多人协作工作模式一般是这样的：
+				1.首先，可以试图用git push origin [分支名]推送自己的修改
+				2.如果推送失败，则因为远程分支比你的本地更新早，需要先用git pull试图合并
+				3.如果合并有冲突，则需要解决冲突，并在本地提交。再用git push origin [分支名]推送		
+	以上笔记参考http://blog.csdn.net/zhang1027963459/article/details/50478340
